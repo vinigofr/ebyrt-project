@@ -1,0 +1,27 @@
+# Front end ==============================================================
+# dependencies
+ebyrt-project-front-end/node_modules
+ebyrt-project-front-end/.pnp
+ebyrt-project-front-end/.pnp.js
+
+# testing
+ebyrt-project-front-end/coverage
+
+# production
+ebyrt-project-front-end/build
+
+# misc
+ebyrt-project-front-end/.DS_Store
+ebyrt-project-front-end/.env.local
+ebyrt-project-front-end/.env.development.local
+ebyrt-project-front-end/.env.test.local
+ebyrt-project-front-end/.env.production.local
+
+ebyrt-project-front-end/npm-debug.log*
+ebyrt-project-front-end/yarn-debug.log*
+ebyrt-project-front-end/yarn-error.log*
+# Front end ==============================================================
+
+# Back end ==============================================================
+# dependencies
+server/node_modules
