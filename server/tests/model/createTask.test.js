@@ -1,10 +1,6 @@
 const { expect } = require('chai');
-
-// const TaskModel = require('../../src/models/index');
-
-const CreateTask = {
-  create: () => {}
-};
+const sinon = require('sinon');
+const TaskModel = require('../../src/models/index');
 
 describe('Insert a new task on DB', () => {
 
@@ -17,13 +13,13 @@ describe('Insert a new task on DB', () => {
 
   describe('When it is successfully inserted', () => {
     it('Return a object', async () => {
-      const response = await CreateTask.create(payloadTask);
+      const response = await TaskModel.CreateTask(payloadTask);
 
       expect(response).to.be.a('object');
     });
 
     it('To have properties "title, "description", "createdAt", "status"', async () => {
-      const response = await CreateTask.create(payloadTask);
+      const response = await TaskModel.CreateTask(payloadTask);
 
       expect(response).to.have.a.property('title');
       expect(response).to.have.a.property('description');

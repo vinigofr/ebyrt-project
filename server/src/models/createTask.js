@@ -1,8 +1,11 @@
-const connection = require('./connection');
+const connection = require('./connection').getConnection;
 
 const createTask = async (title, description, status) => {
-  const { insertedId } = await connection.then((db) => db.collection('tasks').insertOne({
-    title, description, status, createdAt: new Date(),
+  const { insertedId } = await connection().then((db) => db.collection('tasks').insertOne({
+    title,
+    description,
+    status,
+    createdAt: new Date(),
   }));
 
   return {
