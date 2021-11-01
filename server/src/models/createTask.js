@@ -1,10 +1,10 @@
 const connection = require('./connection').getConnection;
 
-const createTask = async (title, description, status) => {
+const createTask = async (title, description) => {
   const { insertedId } = await connection().then((db) => db.collection('tasks').insertOne({
     title,
     description,
-    status,
+    status: 'pendente',
     createdAt: new Date(),
   }));
 
@@ -12,9 +12,9 @@ const createTask = async (title, description, status) => {
     _id: insertedId,
     title,
     description,
-    status,
+    status: 'pendente',
     createdAt: new Date(),
-  }
+  };
 };
 
 module.exports = createTask;

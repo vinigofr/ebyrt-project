@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-const DB_URL= 'mongodb://127.0.0.1:27017';
+const DB_URL = 'mongodb://127.0.0.1:27017';
 const DB_NAME = 'ebyrt';
 const DB_CONFIG = { useNewUrlParser: true, useUnifiedTopology: true };
  
