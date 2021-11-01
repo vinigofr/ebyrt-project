@@ -5,12 +5,11 @@ const deleteTask = async (req, res, next) => {
   const { id } = req.body;
 
   const deletedTask = await TaskService.deleteTask(id);
-  console.log(deletedTask);
 
   if (deletedTask === null) {
     return next({
       status: status.notFound,
-      message: error.taskNotFound
+      message: error.taskNotFound,
     });
   }
 

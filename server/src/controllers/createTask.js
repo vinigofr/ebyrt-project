@@ -1,5 +1,5 @@
 const TaskService = require('../services/index');
-const { status, error } = require('../api/schemas');
+const { status } = require('../api/schemas');
 
 const createTask = async (req, res, next) => {
   const { title, description } = req.body;
