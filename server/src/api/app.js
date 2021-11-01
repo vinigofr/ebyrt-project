@@ -2,15 +2,16 @@ const express = require('express');
 
 const app = express();
 app.use(express.json());
-const pingRouter = require('../routes/pingRouter');
 
 // Imports here
-//
+const pingRouter = require('../routes/pingRouter');
+const taskRouter = require('../routes/taskRouter');
 
-// Rotas
+// Routes here
 app.use('/ping', pingRouter);
+app.use('/task', taskRouter);
 
-// Middleware de erro
+// Error middleware
 //
 
 module.exports = app;
