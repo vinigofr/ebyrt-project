@@ -4,7 +4,8 @@
   "description": "A backent for the project!",
   "main": "src/api/server.js",
   "scripts": {
-    "test": "mocha ./tests"
+    "test": "mocha tests/**/*.test.js",
+    "run:lint": "eslint "
   },
   "author": "Vinicius Gouveia",
   "license": "ISC",
@@ -16,6 +17,8 @@
   },
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^9.1.3"
+    "eslint": "^8.1.0",
+    "mocha": "^9.1.3",
+    "sinon": "^11.1.2"
   }
 }
