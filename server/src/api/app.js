@@ -12,6 +12,6 @@ app.use('/ping', pingRouter);
 app.use('/task', taskRouter);
 
 // Error middleware
-//
+app.use(require('../middlewares/index').errorMiddleware);
 
 module.exports = app;

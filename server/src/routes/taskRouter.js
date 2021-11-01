@@ -1,7 +1,9 @@
 const Router = require('express').Router();
 
-const cretateTask = require('../controllers/createTask');
+const createTask = require('../controllers/createTask');
 
-Router.post('/create', cretateTask);
+const TaskMiddleware = require('../middlewares/index');
+
+Router.post('/create', createTask);
 
 module.exports = Router;

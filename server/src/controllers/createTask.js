@@ -1,5 +1,5 @@
-const creteTask = (req, res) => {
+const createTask = (req, res) => {
   
 };
 
-module.exports = creteTask;
+module.exports = createTask;
