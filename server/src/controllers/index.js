@@ -1,4 +1,4 @@
-const createTask = require('../controllers/createTask');
+const createTask = require('./createTask');
 
 module.exports = {
   createTask,

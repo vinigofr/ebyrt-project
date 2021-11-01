@@ -4,8 +4,7 @@ const TaskController = require('../controllers/index');
 const TaskMiddleware = require('../middlewares/index');
 
 Router.post('/create',
-TaskMiddleware.verifyTaskFields,
-TaskController.createTask,
-);
+  TaskMiddleware.verifyTaskFields,
+  TaskController.createTask);
 
 module.exports = Router;

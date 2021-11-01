@@ -6,8 +6,8 @@ const createTask = async (req, res, next) => {
 
   const createdTask = await TaskService.createTask(title, description);
 
-  if(createdTask.err) {
-    return next(createdTask.err)
+  if (createdTask.err) {
+    return next(createdTask.err);
   }
 
   return res.status(status.created).json(createdTask);

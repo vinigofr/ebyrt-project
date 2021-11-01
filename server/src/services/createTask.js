@@ -6,9 +6,11 @@ const createTask = async (title, description) => {
     const task = await TaskModel.CreateTask(title, description);
     return task;
   } catch (e) {
-    return { err: {
-      status: status.internalServerError, message: error.serverError,
-    } };
+    return {
+      err: {
+        status: status.internalServerError, message: error.serverError,
+      },
+    };
   }
 };
 

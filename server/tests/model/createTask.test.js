@@ -3,7 +3,6 @@ const sinon = require('sinon');
 const TaskModel = require('../../src/models/index');
 
 describe('Insert a new task on DB', () => {
-
   // Task example
   const payloadTask = {
     title: 'Tarefa 1',

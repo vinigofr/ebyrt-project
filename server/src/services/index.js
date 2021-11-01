@@ -1,5 +1,5 @@
-const createTask = require('../services/createTask');
+const createTask = require('./createTask');
 
 module.exports = {
-  createTask
+  createTask,
 };
