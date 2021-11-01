@@ -1,6 +1,7 @@
 const { status, error } = require('../api/schemas');
 
-const verifyTaskFields = (req, res, next) => {
+// eslint-disable-next-line consistent-return
+const verifyTaskFields = (req, _res, next) => {
   const { title, description } = req.body;
 
   if (!title || !description) {
