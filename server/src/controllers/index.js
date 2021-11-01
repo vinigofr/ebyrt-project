@@ -1,7 +1,7 @@
 const createTask = require('../controllers/createTask');
-const editTask = require('../controllers/editTask');
+const editTaskInformation = require('../controllers/editTaskInformation');
 
 module.exports = {
   createTask,
-  editTask
+  editTaskInformation
 };

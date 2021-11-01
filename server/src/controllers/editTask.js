@@ -1,5 +1,5 @@
-const editTask = (req, res) => {
-  return res.status(200).send('editTask');
+const editTaskInformation = (req, res) => {
+  return res.status(200).send('editTaskInformation');
 };
 
-module.exports = editTask;
+module.exports = editTaskInformation;
