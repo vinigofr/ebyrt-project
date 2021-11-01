@@ -5,7 +5,7 @@
   "main": "src/api/server.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js",
-    "run:lint": "eslint "
+    "lint": "eslint \"**/*.js\""
   },
   "author": "Vinicius Gouveia",
   "license": "ISC",

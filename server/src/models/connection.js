@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
 const express = require('express');
@@ -14,10 +14,10 @@ let db = null;
  
 const getConnection = () => {
   return db ? Promise.resolve(db)
-  : MongoClient.connect(DB_URL, DB_CONFIG).then((conn) => {
-    db = conn.db(DB_NAME);
-    return db;
-  });
+    : MongoClient.connect(DB_URL, DB_CONFIG).then((conn) => {
+      db = conn.db(DB_NAME);
+      return db;
+    });
 };
 
 module.exports = { getConnection };
