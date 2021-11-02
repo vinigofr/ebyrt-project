@@ -8,6 +8,7 @@ Router.post('/create',
   TaskController.createTask);
 
 Router.delete('/delete',
+  TaskMiddleware.verifyIfTaskExists,
   // Depois inserir um middleware de validação do id
   TaskController.deleteTask);
 
