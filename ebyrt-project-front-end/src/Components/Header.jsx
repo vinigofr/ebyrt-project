@@ -1,9 +1,16 @@
 import React from 'react';
 
+const style = {
+  display: 'flex',
+  backgroundColor: '#f4f4f4',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+
 function Header() {
   return (
-    <header>
-      <h1>Ebyrt Project Front End (Task Manager)</h1>
+    <header style={style}>
+      <h1>Task Manager (Ebyrt Project)</h1>
     </header>
   );
 }
