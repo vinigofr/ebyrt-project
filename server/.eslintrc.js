@@ -20,5 +20,6 @@ module.exports = {
       },
     ],
     treatUndefinedAsUnspecified: 0,
+    argsIgnorePattern: '^_',
   },
 };
