@@ -8,6 +8,10 @@ Router.post('/create',
   TaskController.createTask);
 
 Router.delete('/delete',
+  // Depois inserir um middleware de validação do id
   TaskController.deleteTask);
+
+Router.get('/all',
+  TaskController.getAllTasks);
 
 module.exports = Router;

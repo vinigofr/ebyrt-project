@@ -6,7 +6,7 @@ const deleteTask = async (req, res, next) => {
 
   const deletedTask = await TaskService.deleteTask(id);
 
-  if (deletedTask === null) {
+  if (!deletedTask) {
     return next({
       status: status.notFound,
       message: error.taskNotFound,
@@ -17,7 +17,7 @@ const deleteTask = async (req, res, next) => {
     return next(deletedTask.err);
   }
 
-  return res.status(status.deleted).json(deletedTask);
+  return res.status(status.ok).json(deletedTask);
 };
 
 module.exports = deleteTask;
