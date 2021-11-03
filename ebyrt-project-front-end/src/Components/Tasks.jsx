@@ -10,7 +10,6 @@ function Tasks() {
       await fetch('http://localhost:3001/task/all')
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setTasks(data);
           setLoading(false);
         });
@@ -22,8 +21,8 @@ function Tasks() {
   return loading ? <Loading /> : (
     <div>
       <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>{task.title}</li>
+        {tasks.map(({ title, _id }) => (
+          <li key={_id}>{`${title} ---- ${_id}`}</li>
         ))}
       </ul>
     </div>
