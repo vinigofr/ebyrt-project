@@ -1,7 +1,8 @@
 import React from 'react';
 import style from '../Styles/General.css';
+import TaskType from './TaskType';
 
-const taskTypes = [
+const types = [
   'pending',
   'doing',
   'done',
@@ -11,9 +12,7 @@ function TasksContainer() {
   return (
     <div style={style} className="tasks-container">
       {
-        taskTypes.map((taskType) => (
-          <div>{taskType}</div>
-        ))
+        types.map((type) => <TaskType type={type} />)
       }
     </div>
   );

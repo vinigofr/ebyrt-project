@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function TaskType(props) {
-  const { taskType } = props;
+  const { type } = props;
   return (
     <div>
-      { taskType }
+      { type }
     </div>
   );
 }
+
+TaskType.propTypes = {
+  type: PropTypes.string.isRequired,
+};
 
 export default TaskType;
