@@ -4,7 +4,7 @@ import Context from '../Context/Context';
 
 function TaskType(props) {
   const { tasks } = React.useContext(Context);
-  alert(tasks);
+
   const { type } = props;
   return (
     <div>
