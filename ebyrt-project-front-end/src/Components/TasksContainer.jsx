@@ -3,9 +3,9 @@ import style from '../Styles/General.css';
 import TaskType from './TaskType';
 
 const types = [
-  'pending',
-  'doing',
-  'done',
+  'pendente',
+  'fazendo',
+  'feito',
 ];
 
 function TasksContainer() {
