@@ -4,7 +4,6 @@ import Context from '../Context/Context';
 
 function Tasks() {
   const { tasks, setTasks } = React.useContext(Context);
-  // const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
