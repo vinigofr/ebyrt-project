@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (
     <div>
-      Not Found (404)
-      <a href="/">Ir para o início</a>
+      <h1>404</h1>
+      <Link to="/">Ir para o início</Link>
     </div>
   );
 }
