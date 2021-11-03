@@ -16,17 +16,6 @@ function Tasks() {
           setLoading(false);
         });
     }
-
-    // (
-    //   <div>
-    //     <ul>
-    //       {tasks.map(({ title, _id }) => (
-    //         <li key={_id}>{`${title} ---- ${_id}`}</li>
-    //       ))}
-    //     </ul>
-    //   </div>
-    // )
-
     fetchTasks();
   }, [loading]);
 
