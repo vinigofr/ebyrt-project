@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import Context from './Context';
 
 function Provider({ children }) {
-  const context = {};
+  const [tasks, setTasks] = React.useState();
+
+  const context = {
+    tasks, setTasks,
+  };
 
   return (
     <Context.Provider value={context}>

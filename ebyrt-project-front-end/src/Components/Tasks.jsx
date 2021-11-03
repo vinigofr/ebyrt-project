@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
+import Context from '../Context/Context';
 
 function Tasks() {
-  const [tasks, setTasks] = useState([]);
+  const { tasks, setTasks } = React.useContext(Context);
+  // const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(async () => {
