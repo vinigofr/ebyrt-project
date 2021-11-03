@@ -2,14 +2,14 @@ import React from 'react';
 
 // Components \/
 import Header from '../Components/Header';
-import Tasks from '../Components/Tasks';
+import TasksBody from '../Components/TasksBody';
 // Components /\
 
 function Main() {
   return (
     <div>
       <Header />
-      <Tasks />
+      <TasksBody />
     </div>
   );
 }
