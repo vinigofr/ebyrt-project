@@ -9,6 +9,7 @@ function TaskCard({ task }) {
     description,
     status,
     createdAt,
+    _id,
   } = task;
 
   return (
@@ -17,8 +18,8 @@ function TaskCard({ task }) {
       <p>{`Descrição: ${description}`}</p>
       <p>{`Status: ${status}`}</p>
       <p>{`Criado em: ${createdAt}`}</p>
-      <DeleteButton />
-      <EditButton />
+      <DeleteButton taskId={_id} />
+      <EditButton taskId={_id} />
     </div>
   );
 }
@@ -29,6 +30,7 @@ TaskCard.propTypes = {
     description: PropTypes.string,
     status: PropTypes.string,
     createdAt: PropTypes.string,
+    _id: PropTypes.string,
   }).isRequired,
 };
 
