@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddTask() {
+function AddTask({ forceUpdate }) {
   const [task, setTask] = React.useState({
     title: '',
     description: '',

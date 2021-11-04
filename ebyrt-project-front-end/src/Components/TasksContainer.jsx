@@ -13,7 +13,7 @@ const types = [
 function TasksContainer({ forceUpdate }) {
   return (
     <>
-      <AddTask />
+      <AddTask forceUpdate={forceUpdate} />
       <div style={style} className="tasks-container">
         {
         types.map((type) => <TaskType type={type} forceUpdate={forceUpdate} key={type} />)
