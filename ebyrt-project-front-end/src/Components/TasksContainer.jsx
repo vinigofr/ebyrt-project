@@ -13,7 +13,7 @@ function TasksContainer({ forceUpdate }) {
   return (
     <div style={style} className="tasks-container">
       {
-        types.map((type) => <TaskType type={type} forceUpdate={forceUpdate} />)
+        types.map((type) => <TaskType type={type} forceUpdate={forceUpdate} key={type} />)
       }
     </div>
   );
