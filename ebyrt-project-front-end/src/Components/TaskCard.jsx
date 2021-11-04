@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DeleteButton from './DeleteButtom';
 
 function TaskCard({ task }) {
   const {
@@ -15,6 +16,7 @@ function TaskCard({ task }) {
       <p>{`Descrição: ${description}`}</p>
       <p>{`Status: ${status}`}</p>
       <p>{`Criado em: ${createdAt}`}</p>
+      <DeleteButton />
     </div>
   );
 }
