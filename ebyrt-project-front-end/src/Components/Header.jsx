@@ -1,5 +1,5 @@
 import React from 'react';
-import AddTaskButton from './AddTaskButton';
+import AddTask from './AddTask';
 
 const style = {
   display: 'flex',
@@ -14,7 +14,7 @@ function Header() {
     <header style={style}>
       <h1>Task Manager (Ebyrt Project)</h1>
       <div>
-        <AddTaskButton />
+        <AddTask />
       </div>
     </header>
   );
