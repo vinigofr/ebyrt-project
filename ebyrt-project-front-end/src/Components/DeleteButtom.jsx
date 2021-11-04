@@ -1,8 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function anyFunction(taskId) {
-  console.log(taskId);
+async function deleteTask(taskId) {
+  const formData = new FormData();
+  formData.append('id', taskId);
+
+  await fetch('http://localhost:3001/task/delete', {
+    method: 'DELETE',
+    body: formData,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  }).then((json) => json.json())
+    .then((response) => console.log(response));
 }
 
 function DeleteButtom(props) {
@@ -10,7 +20,7 @@ function DeleteButtom(props) {
   return (
     <button
       type="button"
-      onClick={() => anyFunction(taskId)}
+      onClick={() => deleteTask(taskId)}
     >
       🗑️
     </button>
