@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddTaskForm() {
+function TaskForm() {
   return (
     <div>
       rendered task form
@@ -8,4 +8,4 @@ function AddTaskForm() {
   );
 }
 
-export default AddTaskForm;
+export default TaskForm;
