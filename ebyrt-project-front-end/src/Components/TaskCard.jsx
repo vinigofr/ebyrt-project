@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DeleteButton from './DeleteButtom';
+import EditButton from './EditButton';
 
 function TaskCard({ task }) {
   const {
@@ -17,6 +18,7 @@ function TaskCard({ task }) {
       <p>{`Status: ${status}`}</p>
       <p>{`Criado em: ${createdAt}`}</p>
       <DeleteButton />
+      <EditButton />
     </div>
   );
 }
