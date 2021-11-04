@@ -9,7 +9,7 @@ function Tasks() {
   // Para fazer a re-renderização do componente, precisei consultar uma forma
   // segura de poder fazer isso.
   // Fonte: https://blog.logrocket.com/how-when-to-force-react-component-re-render/
-  const [, updateState] = React.useState();
+  const [update, updateState] = React.useState();
   const forceUpdate = React.useCallback(() => updateState({}), []);
   //
 
@@ -23,7 +23,7 @@ function Tasks() {
         });
     }
     fetchTasks();
-  }, [loading]);
+  }, [loading, update]);
 
   return loading ? <Loading /> : <TasksContainer forceUpdate={forceUpdate} />;
 }

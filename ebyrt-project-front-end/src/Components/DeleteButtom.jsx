@@ -5,12 +5,11 @@ import axios from 'axios';
 // Para usar o metodo DELETE no axios, consultei a seguinte pagina:
 // https://masteringjs.io/tutorials/axios/delete
 
-async function deleteTask(taskId, forceUpdate) {
-  await axios.delete('http://localhost:3001/task/delete', {
+async function deleteTask(taskId) {
+  return axios.delete('http://localhost:3001/task/delete', {
     data: { id: taskId },
   })
     .then((response) => response.data);
-  return forceUpdate();
 }
 
 function DeleteButtom(props) {
@@ -18,7 +17,7 @@ function DeleteButtom(props) {
   return (
     <button
       type="button"
-      onClick={() => deleteTask(taskId, forceUpdate)}
+      onClick={() => deleteTask(taskId).then(() => forceUpdate())}
     >
       🗑️
     </button>
