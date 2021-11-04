@@ -1,11 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 function AddTask({ forceUpdate }) {
   const [task, setTask] = React.useState({
     title: '',
     description: '',
   });
+
+  const createTask = async () => {
+    await axios.post('http://localhost:3001/task/create', {
+      ...task,
+    })
+      .then(() => forceUpdate())
+      .catch(() => alert('Todos os campos devem ser preenchidos!'));
+    forceUpdate();
+    // setTask({
+    //   title: '',
+    //   description: '',
+    // });
+    // forceUpdate();
+  };
 
   return (
     <div className="add-task-field">
@@ -25,7 +40,7 @@ function AddTask({ forceUpdate }) {
       </form>
       <button
         type="button"
-        onClick={() => console.log(task)}
+        onClick={() => createTask()}
       >
         ➕ Nova Tarefa
       </button>
