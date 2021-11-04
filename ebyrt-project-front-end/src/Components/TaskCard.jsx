@@ -32,6 +32,7 @@ TaskCard.propTypes = {
     createdAt: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
+  forceUpdate: PropTypes.func.isRequired,
 };
 
 export default TaskCard;

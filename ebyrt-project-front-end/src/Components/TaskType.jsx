@@ -30,6 +30,7 @@ function TaskType(props) {
 
 TaskType.propTypes = {
   type: PropTypes.string.isRequired,
+  forceUpdate: PropTypes.func.isRequired,
 };
 
 export default TaskType;

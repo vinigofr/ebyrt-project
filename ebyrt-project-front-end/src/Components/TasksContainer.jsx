@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from '../Styles/General.css';
 import TaskType from './TaskType';
 
@@ -17,5 +18,9 @@ function TasksContainer({ forceUpdate }) {
     </div>
   );
 }
+
+TasksContainer.propTypes = {
+  forceUpdate: PropTypes.func.isRequired,
+};
 
 export default TasksContainer;
