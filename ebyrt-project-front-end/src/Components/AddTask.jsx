@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function AddTask({ forceUpdate }) {
   const [task, setTask] = React.useState({
@@ -31,5 +32,9 @@ function AddTask({ forceUpdate }) {
     </div>
   );
 }
+
+AddTask.propTypes = {
+  forceUpdate: PropTypes.func.isRequired,
+};
 
 export default AddTask;
