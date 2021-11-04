@@ -38,3 +38,7 @@ Para saber a forma correta de inserção do scroll, acesse o link acima */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin: 10px;
 }
+
+.add-task-field {
+  display: flex;
+}
