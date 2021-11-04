@@ -1,5 +1,4 @@
 import React from 'react';
-import AddTask from './AddTask';
 
 const style = {
   display: 'flex',
@@ -13,9 +12,6 @@ function Header() {
   return (
     <header style={style}>
       <h1>Task Manager (Ebyrt Project)</h1>
-      <div>
-        <AddTask />
-      </div>
     </header>
   );
 }

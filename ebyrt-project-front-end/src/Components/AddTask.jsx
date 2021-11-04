@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddTaskButton() {
+function AddTask() {
   return (
     <div className="add-task-field">
       <form>
@@ -14,4 +14,4 @@ function AddTaskButton() {
   );
 }
 
-export default AddTaskButton;
+export default AddTask;
