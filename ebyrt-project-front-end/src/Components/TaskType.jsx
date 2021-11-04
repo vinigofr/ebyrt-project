@@ -6,7 +6,7 @@ import '../Styles/General.css';
 
 function TaskType(props) {
   const { tasks } = React.useContext(Context);
-  const { type } = props;
+  const { type, forceUpdate } = props;
 
   return (
     <div className="task-type-container">
@@ -18,7 +18,7 @@ function TaskType(props) {
           <>
             {
             task.status === type
-              ? <TaskCard task={task} />
+              ? <TaskCard task={task} forceUpdate={forceUpdate} />
               : null
             }
           </>

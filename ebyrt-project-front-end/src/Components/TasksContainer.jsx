@@ -8,11 +8,11 @@ const types = [
   'feito',
 ];
 
-function TasksContainer() {
+function TasksContainer({ forceUpdate }) {
   return (
     <div style={style} className="tasks-container">
       {
-        types.map((type) => <TaskType type={type} />)
+        types.map((type) => <TaskType type={type} forceUpdate={forceUpdate} />)
       }
     </div>
   );

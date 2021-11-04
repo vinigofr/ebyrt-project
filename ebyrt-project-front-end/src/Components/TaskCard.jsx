@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DeleteButton from './DeleteButtom';
 import EditButton from './EditButton';
 
-function TaskCard({ task }) {
+function TaskCard({ task, forceUpdate }) {
   const {
     title,
     description,
@@ -18,7 +18,7 @@ function TaskCard({ task }) {
       <p>{`Descrição: ${description}`}</p>
       <p>{`Status: ${status}`}</p>
       <p>{`Criado em: ${createdAt}`}</p>
-      <DeleteButton taskId={_id} />
+      <DeleteButton taskId={_id} forceUpdate={forceUpdate} />
       <EditButton taskId={_id} />
     </div>
   );

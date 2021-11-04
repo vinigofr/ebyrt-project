@@ -6,6 +6,12 @@ import TasksContainer from './TasksContainer';
 function Tasks() {
   const { setTasks } = React.useContext(Context);
   const [loading, setLoading] = useState(true);
+  // Para fazer a re-renderização do componente, precisei consultar uma forma
+  // segura de poder fazer isso.
+  // Fonte: https://blog.logrocket.com/how-when-to-force-react-component-re-render/
+  const [, updateState] = React.useState();
+  const forceUpdate = React.useCallback(() => updateState({}), []);
+  //
 
   useEffect(async () => {
     async function fetchTasks() {
@@ -19,7 +25,7 @@ function Tasks() {
     fetchTasks();
   }, [loading]);
 
-  return loading ? <Loading /> : <TasksContainer />;
+  return loading ? <Loading /> : <TasksContainer forceUpdate={forceUpdate} />;
 }
 
 export default Tasks;
