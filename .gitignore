@@ -25,3 +25,4 @@ ebyrt-project-front-end/yarn-error.log*
 # Back end ==============================================================
 # dependencies
 server/node_modules
+server/.env
