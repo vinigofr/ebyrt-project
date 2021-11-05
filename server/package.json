@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha ./tests/**/*.test.js --exit",
     "test:coverage": "nyc --include='src/**/*.js' npm run test",
-    "lint": "eslint \"**/*.js\""
+    "lint": "eslint \"**/*.js\"",
+    "start": "nodemon"
   },
   "author": "Vinicius Gouveia",
   "license": "ISC",
