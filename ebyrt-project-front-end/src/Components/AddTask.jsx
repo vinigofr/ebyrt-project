@@ -9,17 +9,12 @@ function AddTask({ forceUpdate }) {
   });
 
   const createTask = async () => {
-    await axios.post('http://localhost:3001/task/create', {
-      ...task,
-    })
-      .then(() => forceUpdate())
+    await axios.post('http://localhost:3001/task/create', { ...task })
+      .then(() => {
+        forceUpdate();
+        setTask({ title: '', description: '' });
+      })
       .catch(() => alert('Todos os campos devem ser preenchidos!'));
-    forceUpdate();
-    // setTask({
-    //   title: '',
-    //   description: '',
-    // });
-    // forceUpdate();
   };
 
   return (
@@ -30,8 +25,10 @@ function AddTask({ forceUpdate }) {
           name="title"
           placeholder="Título"
           onChange={(e) => setTask({ ...task, title: e.target.value })}
+          value={task.title}
         />
         <input
+          value={task.description}
           type="text"
           name="description"
           placeholder="Descrição"
