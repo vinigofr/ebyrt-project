@@ -26,4 +26,3 @@ ebyrt-project-front-end/yarn-error.log*
 # dependencies
 server/node_modules
 server/.env
-server/.nyc_output

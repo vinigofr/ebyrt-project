@@ -14,7 +14,7 @@ const DB_CONFIG = { useNewUrlParser: true, useUnifiedTopology: true };
 let db = null;
 
 const getConnection = () => (db ? Promise.resolve(db)
-  : MongoClient.connect(DB_URL, DB_CONFIG).then((conn) => {
+  : MongoClient.connect(REMOTE_URL, DB_CONFIG).then((conn) => {
     db = conn.db(DB_NAME);
     return db;
   }));
