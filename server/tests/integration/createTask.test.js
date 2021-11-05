@@ -1,5 +1,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const sinon = require('sinon');
+const { MongoClient } = require('mongodb');
+const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const server = require('../../src/api/app');
 
@@ -10,14 +13,26 @@ const { expect } = chai;
 describe('POST /task/create', () => {
   describe('When created a task', () => {
     let response = {};
+    const DBServer = new MongoMemoryServer();
 
     before(async () => {
+      const OPTIONS = { useNewUrlParser: true, useUnifiedTopology: true };
+      const mockedURL = await DBServer.getUri();
+      const mockedConnection = await MongoClient.connect(mockedURL, OPTIONS);
+      
+      sinon.stub(MongoClient, 'connect').resolves(mockedConnection);
+
       response = await chai.request(server)
         .post('/task/create')
         .send({
           title: 'Limpar a casa',
           description: 'Começando pela cozinha!',
         });
+    });
+
+    after(async () => {
+      MongoClient.connect.restore();
+      await DBServer.stop();
     });
 
     it('Return status code 201', () => {
