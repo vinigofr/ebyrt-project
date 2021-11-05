@@ -34,7 +34,7 @@ Agora no seu sistema operacional:
 ------------
 
 Como iniciar o servidor:
-1. Pelo fato de termos em um só repositório o servidor e o front-end, vamos precisar de dois terminais rodando os servidores necessários.
-2. Iniciando o servidor no primeiro terminal: ` cd server && npm start`
-3. Iniciando o front-end: `cd ebyrt-project-front-end && npm start`
+1. Pelo fato de termos em um só repositório para o servidor e para o front-end, vamos precisar de dois terminais rodando os servidores necessários.
+2. Iniciando o servidor back-end no primeiro terminal: ` cd server && npm start`
+3. Iniciando o servidor front-end no segundo terminal: `cd ebyrt-project-front-end && npm start`
 
