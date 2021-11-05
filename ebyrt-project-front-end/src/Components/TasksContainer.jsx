@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from '../Styles/General.css';
 import TaskType from './TaskType';
+import AddTask from './AddTask';
 
 const types = [
   'pendente',
@@ -11,11 +12,14 @@ const types = [
 
 function TasksContainer({ forceUpdate }) {
   return (
-    <div style={style} className="tasks-container">
-      {
-        types.map((type) => <TaskType type={type} forceUpdate={forceUpdate} />)
+    <>
+      <AddTask forceUpdate={forceUpdate} />
+      <div style={style} className="tasks-container">
+        {
+        types.map((type) => <TaskType type={type} forceUpdate={forceUpdate} key={type} />)
       }
-    </div>
+      </div>
+    </>
   );
 }
 

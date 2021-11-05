@@ -2,6 +2,7 @@ import React from 'react';
 
 const style = {
   display: 'flex',
+  flexDirection: 'column',
   backgroundColor: '#f4f4f4',
   justifyContent: 'center',
   alignItems: 'center',
