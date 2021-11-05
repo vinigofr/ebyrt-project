@@ -1,6 +1,4 @@
-# Projeto Ebyrt ( Todo List )
-
-####Projeto ainda em desenvolvimento!
+# Projeto Ebyrt ( Todo List ) | Projeto ainda em desenvolvimento!
 
 
 ------------
