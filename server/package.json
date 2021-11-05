@@ -4,7 +4,8 @@
   "description": "A backent for the project!",
   "main": "src/api/server.js",
   "scripts": {
-    "test": "mocha tests/**/*.test.js --exit",
+    "test": "mocha ./tests/**/*.test.js --exit",
+    "mocha": "nyc --all --include models --include services --include controllers mocha tests/**/*.test.js --exit",
     "lint": "eslint \"**/*.js\""
   },
   "author": "Vinicius Gouveia",
