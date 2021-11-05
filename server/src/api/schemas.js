@@ -11,7 +11,7 @@ const status = {
 };
 
 const error = {
-  missingFields: 'All fields must be filled ',
+  missingFields: 'All fields must be filled',
   serverError: 'Internal server error',
   taskNotFound: 'Task not found',
 };
